@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <button class="btn">Click me</button>
+    <script>
+        let users = [
+            {name: "Angela", lastName: "Antova", age: 26 },
+            {name: "Martin", lastName: "Tolev", age: 45 },
+            {name: "Irena", lastName: "Angelov", age: 18 },
+        ]
+
+        // Print the whole name, first and last name
+        let mapUsers = users.map((user) => {
+            let fullName = user.name + ' ' + user.lastName + ' age: ' + user.age;
+            //in map method we must always have return
+            return fullName;
+        })
+        console.log(mapUsers);
+        // map always returns new array 
+        // it does not change the size of the original array
+
+        // Filter is used to provide new array depending on certain criteria
+        let result = users.filter((user) => user.age < 30);
+        let resul1t = users.filter((user) => user.age > 30);
+        console.log(result);
+
+        // find is used to find an instance inside the array
+        let findResult = users.find((user) => user.name === 'Angela')
+        console.log(findResult);
+
+        // Kreiraj niza od avtomobili kade sto vnatre ke ima godina, marka i nodel i potoa so map da go ispecatime
+        // modelot i koja godina e
+        let cars = [
+            {marka: "Volkswagen", model: "Polo", godina: 2008},
+            {marka: "Peugeot", model: "208", godina: 2011},
+            {marka: "Hyndai", model: "Accent", godina: 1998},
+            {marka: "BMW", model: "Sedan", godina: 2018},
+        ]
+
+        let mapCars = cars.map((car) => {
+            let newArray = car.model + ' ' + car.godina;
+            return newArray;
+        })
+        console.log(mapCars);
+
+        // da napravime filter na site avtomobili koi se postari od 2010
+        let filteredCars = cars.filter((car) => car.godina < 2010)
+        console.log(filteredCars);
+
+        // da go najdeme dali postoi avtomobil so marka BMW
+        let findCar = cars.find((car) => car.marka === 'BMW');
+        console.log(findCar);
+
+
+        // Destruktuiranje na nizi
+
+        // ova e bez destruktuiranje, ne e pametna idea, mnogu linii
+        let fruits = ["mango", "orange", "apple", "lemon", "kiwi"];
+        let fruit1 = fruits[0];
+        let fruit3 = fruits[2];
+        console.log(fruit1, fruit3);
+
+        // so destruktuiranje na nizi
+        let [fruit11,,,fruit33] = fruits;
+        console.log(fruit11, fruit33);
+
+        // Destruktuiranje na object
+        const person = {
+            firstName: "Angela",
+            lastName: "Antova",
+            age: 26,
+            hobies: {
+                hoby1: "learning",
+                hoby2: "handmade accessories"
+            }
+        }
+        console.log(person.firstName, person.age, person.hobies.hoby1); // bez destruktuiranje
+        if(person.age > 30){
+            console.log("older than 30");
+        }
+
+        // so destruktuiranje na objekt
+        const { firstName, age, hobies: {hoby1} } = person;
+        if(firstName === "Angela") {
+            console.log('hello');
+        }
+
+        // rest i spread operatori vo JS
+
+        let fruits2 = ["mango", "apple", "orange", "pineapple", "banana"];
+        let [firstFruit, secondFruit, ...rest] = fruits2;
+        console.log(firstFruit, secondFruit, rest); //so rest keyword gi printa ostanatite elementi od nizata
+
+        //* REACT - besplatna i open source JS biblioteka za gradenje deklarativni korisnicki koncepti (UI)
+        // oddrzuvan od META zaedno so individualni programeri, zatoa e mokjen bidejki stoi zadi meta(fb)
+        // se koristi za hendlanje na view sloj, UI delot;
+        // glavna cel e da bide brz, fleksibilen i da bide glaven nacin za gradenje na vakvi UI koncepti
+        // angular i vue se frameworks, reactJS e biblioteka; razlikata e react se zanimava za gradenje na interfejsi, interativen e, obratno od deklarativno; dr imaat pravila za da gi sledime, a react ne ostava sami da odlucime kako ke go napravime toa, nema tocen nacin na solving the issues, ima soveti no ne pravila
+
+        // Kreairanje na REACT proekt
+        // npx create-react-app exercise1
+
+
+    </script>
+</body>
+</html>

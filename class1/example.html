@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1 - React</title>
+</head>
+<body>
+    <!-- Callback e sto se izvrsuva vednas po izvrsuvanje na drugata funkcija -->
+    <button class="btn">Click me</button>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        // se stava funkcija posle click funkcija sto ke se povika koga ke se izvsi klcik
+        // part of the () is the callback function
+        btn.addEventListener('click', () => {
+            let name = "Angela";
+            console.log(name);
+        })
+    </script>
+</body>
+</html>
