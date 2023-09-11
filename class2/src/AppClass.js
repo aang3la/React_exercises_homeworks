@@ -1,4 +1,4 @@
-// every component must start with capital letter because React sees small letters as HTML Tags
+//! Every component must start with capital letter because React sees small letters as HTML Tags
 import React from "react";
 import { PlaceClass } from "./components/PlaceClass";
 import { MyClass } from "./components/MyClass";
