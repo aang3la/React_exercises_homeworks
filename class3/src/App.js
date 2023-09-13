@@ -5,6 +5,8 @@ import { Sport3 } from "./components/Sport3";
 import { Player } from "./components/Player";
 import { Comments } from "./components/Comments";
 import { StudentClass } from './components/StudentClass';
+import { CommentsClass } from './components/CommentsClass';
+
 
 
 
@@ -68,17 +70,18 @@ function App() {
       <Sport2 name="Vedran" sport="tennis" />
       <Sport3 name="Aleksandar" sport="basketball" /> */}
 
-    {/* {sportsAndPeople.map((object) => {
-        return <Sport name= {object.name} sport={object.sport} />
-      })} */}
+      {sportsAndPeople.map((object) => {
+          return <Sport name= {object.name} sport={object.sport} />
+        })}
 
-    {/* <Player igrac={gamer} /> */}
+      {/* <Player igrac={gamer} /> */}
 
     <Comments comment={comment}/>
 
-//* Klasna komponenta
     <StudentClass  student={student} />
     <StudentClass  student={student2} />
+
+    <CommentsClass comment={comment}/>
 
     </div>
   );
