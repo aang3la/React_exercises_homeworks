@@ -70,18 +70,18 @@ function App() {
       <Sport2 name="Vedran" sport="tennis" />
       <Sport3 name="Aleksandar" sport="basketball" /> */}
 
-      {sportsAndPeople.map((object) => {
+      {/* {sportsAndPeople.map((object) => {
           return <Sport name= {object.name} sport={object.sport} />
-        })}
+        })} */}
 
       {/* <Player igrac={gamer} /> */}
 
     <Comments comment={comment}/>
 
-    <StudentClass  student={student} />
-    <StudentClass  student={student2} />
+    {/* <StudentClass  student={student} />
+    <StudentClass  student={student2} /> */}
 
-    <CommentsClass comment={comment}/>
+    {/* <CommentsClass comment={comment}/> */}
 
     </div>
   );
