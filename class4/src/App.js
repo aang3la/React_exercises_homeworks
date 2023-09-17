@@ -24,14 +24,14 @@ function App() {
   };
 
   let students = [
-    {name: "Angela", surname: "Antova", index: "10504"},
-    {name: "Irena", surname: "Angelov", index: "20457"},
-    {name: "Danche", surname: "Bacheva", index: "70548"},
-    {name: "Stefan", surname: "Trajkov", index: "40578"},
-    {name: "Aleksandar", surname: "Markov", index: "60578"},
-    {name: "Mario", surname: "Stefanov", index: "60548"},
-    {name: "Marija", surname: "Stefanova", index: "60577"},
-    {name: "Tijana", surname: "Petrovska", index: "74125"},
+    {name: "Angela", surname: "Antova", index: 10504},
+    {name: "Irena", surname: "Angelov", index: 20457},
+    {name: "Danche", surname: "Bacheva", index: 70548},
+    {name: "Stefan", surname: "Trajkov", index: 40578},
+    {name: "Aleksandar", surname: "Markov", index: 60578},
+    {name: "Mario", surname: "Stefanov", index: 60548},
+    {name: "Marija", surname: "Stefanova", index: 60577},
+    {name: "Tijana", surname: "Petrovska", index: 74125},
   ];
 
   return (
