@@ -3,6 +3,8 @@ import { Car } from "./components/Car";
 import { User } from "./components/User";
 import { State } from "./components/State";
 import { Dates } from "./components/Dates";
+import  { Student }  from "./components/Student";
+import  { Semester }  from "./components/Semester";
 
 function App() {
   let cars = [
@@ -21,6 +23,17 @@ function App() {
     age: 25,
   };
 
+  let students = [
+    {name: "Angela", surname: "Antova", index: "10504"},
+    {name: "Irena", surname: "Angelov", index: "20457"},
+    {name: "Danche", surname: "Bacheva", index: "70548"},
+    {name: "Stefan", surname: "Trajkov", index: "40578"},
+    {name: "Aleksandar", surname: "Markov", index: "60578"},
+    {name: "Mario", surname: "Stefanov", index: "60548"},
+    {name: "Marija", surname: "Stefanova", index: "60577"},
+    {name: "Tijana", surname: "Petrovska", index: "74125"},
+  ];
+
   return (
     <div className="App">
       Hello Class!
@@ -29,14 +42,14 @@ function App() {
       {/* <User user1={user1} /> */}
       <br />
       {/* <State /> */}
-      <Dates />
+      {/* <Dates /> */}
+      <Student students={students}/>
+      <Semester shouldShowSemester={true} />
     </div>
   );
 }
 
 export default App;
-
-
 
 //* React hooks - da ja koristime mokjta na klasnite komp za da kreirame nekakovii f-cii, nekakvi hooks sto se zakacuvaat na stateot na react
 //! Rules when using hooks
@@ -44,17 +57,3 @@ export default App;
 // React Hooks are defined on the begining of our component
 // They are called only from functional components
 // React Hooks can call other react hooks
-
-
-
-
-//? DOMASHNA
-//? da napravime komponenta student koja ke ima: ime, prezime i index
-//? neka ovaa komponenta gi pokazuva studentite vo nekoja tabela
-//? i taa lista da se prakja kako props od app.js
-//? da prakjame pokraj listata i uste edno property koe ke bide nekoj tekst: semestar
-//? neka toj semestar se pokazuva na ekranot vo nekoj h1 element cednas posle tabelata
-
-//? Da stavime PropTypes na listata od studenti i neka taa lista bide required
-//? Neka ima PropTypes i za semestarot
-//? Ako slucajno semestarot ne e praten, sekogas da se ispishuva tekstot 'zimski'

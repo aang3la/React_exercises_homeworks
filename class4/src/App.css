@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(247, 237, 255);
 }
 
 .App-logo {
@@ -35,4 +36,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+table {
+  margin: 0 auto;
+  padding: 5px;
+  width: 80%;
+  background-color: white;
+  color: purple;
+}
+
+h1 {
+  color: rgb(214, 163, 214);
 }
