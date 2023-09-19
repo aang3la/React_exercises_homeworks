@@ -41,10 +41,10 @@ function App() {
       <User user={user} user1={user1} shouldShowUser={false} /> */}
       {/* <User user1={user1} /> */}
       <br />
-      {/* <State /> */}
+      <State />
       {/* <Dates /> */}
-      <Student students={students}/>
-      <Semester shouldShowSemester={true} />
+      {/* <Student students={students}/>
+      <Semester shouldShowSemester={true} /> */}
     </div>
   );
 }
