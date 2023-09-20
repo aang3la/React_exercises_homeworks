@@ -4,6 +4,7 @@ import { Movie } from "./components/Movie";
 import { IncrementClass } from './components/IncrementClass';
 import { Users } from "./components/Users";
 import { CarVotes } from './components/CarVotes';
+import { ShowUser } from './components/ShowUser';
 
 
 
@@ -291,7 +292,8 @@ function App() {
       {/* <IncrementClass /> */}
       {/* <Users users={users} /> */}
 
-      <CarVotes />
+      {/* <CarVotes /> */}
+      <ShowUser />
     </div>
   );
 }
