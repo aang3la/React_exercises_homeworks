@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Movie } from "./components/Movie";
 import { IncrementClass } from './components/IncrementClass';
 import { Users } from "./components/Users";
+import { CarVotes } from './components/CarVotes';
 
 
 
@@ -286,9 +287,11 @@ function App() {
         setStudents([]);
         }}>RETRIEVE STUDENTS AGAIN</button> */}
 
-      <Movie />
+      {/* <Movie /> */}
       {/* <IncrementClass /> */}
       {/* <Users users={users} /> */}
+
+      <CarVotes />
     </div>
   );
 }

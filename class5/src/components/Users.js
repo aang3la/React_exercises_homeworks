@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 
 export const Users = (props) => {
+
+  //usersToShow: This state variable initially holds the list of users passed as a prop
   const [usersToShow, setUsersToShow] = useState(props.users);
+  //value: This state variable initially holds an empty string
   const [value, setValue] = useState("");
 
+  // This function is responsible for handling changes in the input field. 
+  // When the input value changes, it updates the value state with the new value and logs the current value to the console.
   let changeValue = (event) => {
     let newValue = event.target.value;
     setValue(newValue);
@@ -23,6 +28,7 @@ export const Users = (props) => {
   }, [value]);
 
   return (
+    //* The component renders a user interface with an input field for filtering users and a list of users based on the filtered or original usersToShow state
     <div>
       <div>
         <h1>Filter here</h1>
