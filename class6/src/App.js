@@ -11,6 +11,7 @@ function App() {
 
   // const [todos, setTodos] = useState(firstlistOfTodos);
 
+  //* Ova e isto kako toa od gore, po kratko
   const [todos, setTodos] = useState([
     { id: 1, text: "Learn React", done: false },
     { id: 2, text: "Go to the gym", done: false },
@@ -34,8 +35,7 @@ function App() {
     // i ja setira taa nova lista vo todos preku setTodos
     setTodos([...todos, newTodoObject]);
 
-    // slednava sintaksa go pravi istoto kako i pogore
-    // no na podolg nacin
+    //* slednava sintaksa go pravi istoto kako i pogore no na podolg nacin
     // let newTodosList = [...todos];
     // newTodosList.push(newTodoObject);
     // setTodos(newTodosList);
@@ -44,8 +44,7 @@ function App() {
   function markTodoAsDone(todo) {
     console.log(todo);
     setTodos([
-      ...todos.map(
-        (item) =>
+      ...todos.map((item) =>
           item.id === todo.id // go barame kliknatiot element
             ? { id: item.id, text: item.text, done: !item.done }
             : // dokolku e najden kreirame nov objekt so promenet done status
