@@ -5,7 +5,7 @@ import { Homepage } from './components/Homepage';
 import { UserInfo } from "./components/UserInfo";
 import { User2Context } from "./uttils/User2Context";
 
-//* This is the creation of the context
+//* This is the creation of the React context
 //najcesto se koristi eden context, no moze 2 razlicni contexts
 export const UserContext = React.createContext();
 // export const User2Context = React.createContext();
