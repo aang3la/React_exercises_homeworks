@@ -6,10 +6,6 @@ import { NewBook } from './components/NewBook';
 import { NotFound } from './components/NotFound';
 import { Route, Routes, Link } from "react-router-dom";
 
-import { HomeMovies } from './components/HomeMovies';
-import { Movies } from './components/Movies';
-
-
 //* React router (browser router) - pak se stava kako context vo najvisokata komponenta (parent) - index.js
 // install ==> npm i react-router-dom --save
 // isto i Link se importira preku router dom
@@ -47,9 +43,6 @@ function App() {
           <li><Link to="/books">Books</Link></li>
           {/* moze i vaka ama podobro e Link da se koristi; so a se refreshira cela strana i taka e po bavna */}
           {/* <li><a href='/books'>Books with anchor</a></li> */}
-
-          {/* <li><Link to="/">Home</Link></li>
-          <li><Link to="/movies">Movies</Link></li> */}
         </ul>
       </nav>
 
@@ -60,9 +53,6 @@ function App() {
         <Route path='/books/new' element={<NewBook/>}/>
         {/* dokolku ruterot ne fati nikoja ruta od gore, togas ke se ispecati ovaa */}
         <Route path='*' element={<NotFound/>}/>
-
-        {/* <Route path='/' element={<HomeMovies />} />
-        <Route path='/movies' element={<Movies />} /> */}
       </Routes>
     </div>
   );
