@@ -7,7 +7,6 @@
 // Da napravime i Movie komponenta koja kje prima lista od filmovi i preku custom parametar vo rutite da prikazuvame poveke informacii za posebniot film. 
 // Da se prikaze listata od filmovi vo movies i potoa so klik na sekoj od filmovite da se prikazat dopolnitelni informacii. 
 // BONUS: listat da bide samo vo app.js a preku props prakajte ja vo komponentite sto vi trebaat.
-
 export const Home = () => {
     return(
         <div>

@@ -14,7 +14,7 @@ export const Movies = (props) => {
                 </ul>
             </div>
             <div>
-                <Link to="/movies/new"><button id="newmovie">Add new movie</button></Link>
+                <Link to="/movies/new?"><button id="newmovie">Add new movie</button></Link>
             </div>
         </>
     )
