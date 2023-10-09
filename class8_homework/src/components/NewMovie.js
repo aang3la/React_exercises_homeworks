@@ -14,7 +14,7 @@ export const NewMovie = () => {
     const [formValues, setFormValues] = useState(values);
 
     // Query params
-    const [searchParams, setSearchParams] = useSearchParams([]);
+    const [searchParams, setSearchParams] = useSearchParams({name: "", zanr: ""});
     const movieName = searchParams.get("name");
     const zanr = searchParams.get("zanr");
 

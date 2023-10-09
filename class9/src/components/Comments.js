@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import { API_URL } from "../Uttils/constants";
 import { Link } from "react-router-dom";
+import { getComments } from "../Service/commentsService";
 
 export const Comments = () => {
   const [comments, setComments] = useState([]);
 
+  //* Prv nacin za prevzemanje na podatoci od API
+  // useEffect(() => {
+  //   fetch(`${API_URL}/comments`)
+  //     .then((res) => res.json())
+  //     .then((result) => setComments(result))
+  //     .catch((err) => alert(err));
+  // }, []);
+
+  //* Vtor nacin - preku service (getComments) - commentsService.js
   useEffect(() => {
-    fetch(`${API_URL}/comments`)
-      .then((res) => res.json())
-      .then((result) => setComments(result))
-      .catch((err) => alert(err));
+    getComments().then((result) => setComments(result));
   }, []);
 
   return (
