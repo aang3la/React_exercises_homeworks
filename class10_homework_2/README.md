@@ -1,3 +1,4 @@
-# Getting Started with Create React App
+# Using Axios
 Developing a React application that dynamically fetches and displays random food items from an API.
-![Screenshot 2023-10-15 232715](https://github.com/aang3la/React_exercises_homeworks/assets/128414550/be638a3b-df6a-4ccb-b86b-21015ac79474)
+
+![Screenshot 2023-10-15 232419](https://github.com/aang3la/React_exercises_homeworks/assets/128414550/11808805-d1cd-40a8-8290-2f8bbbf63225)
