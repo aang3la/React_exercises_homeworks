@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  background-color: rgb(223, 223, 247);
+  margin: 30px 300px;
+  padding: 20px;
+}
+
+#quantity-num {
+  color: rgb(190, 110, 123);
+  font-size: 40px;
+  text-decoration: double;
+  margin-left: 10px;
+}
+
+button {
+  margin: 20px;
+  padding: 13px;
+  border-radius: 30px;
+  border-style: none;
+  background-color: pink;
+}
+
+input {
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid pink;
+  height: 30px;
+}

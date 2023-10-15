@@ -1,0 +1,16 @@
+body {
+  background-image: url("https://wallpaperswide.com/download/good_food-wallpaper-2880x1800.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.App {
+  text-align: center;
+}
+
+.food-container {
+  background-color: aliceblue;
+  opacity: 90%;
+  margin: 30px 300px;
+  padding: 50px;
+}
