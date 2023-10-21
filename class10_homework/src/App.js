@@ -1,60 +1,31 @@
-import './App.css';
-import { API_URL } from './utils/constants';
-import { Routes, Route, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { Characters } from './components/Characters';
-import { Pagination } from './components/Pagination';
+import "./App.css";
+import { useEffect, useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import { Characters } from "./components/Characters";
+import { Pagination } from "./components/Pagination";
+import { API_URL } from "./utils/constants";
+// import { LocationInfo } from "./components/LocationInfo";
+// import { EpisodeDetails } from "./components/EpisodeDetails";
 
 function App() {
-
-  const [characterData, setCharacterData] = useState([]);
-  const [location, setLocation] = useState([]);
-  const [episode, setEpisode] =useState([]);
-
-  //pagination
+  const [apiData, setApiData] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
-  const [charactersPerPage, setCharactersPerPage] = useState(3);
 
   useEffect(() => {
-    fetch(API_URL + "/character")
+    console.log("FETCHING DATA WITH PAGE: " + currentPage);
+    fetch(API_URL + "/character?page=" + currentPage)
       .then((res) => res.json())
-      .then((result) => setCharacterData(result.results))
+      .then((result) => setApiData(result))
       .catch((err) => alert(err));
-
-      fetch(API_URL + "/location")
-      .then((res) => res.json())
-      .then((result) => setLocation(result.results))
-      .catch((err) => alert(err));
-
-      fetch(API_URL + "/episode")
-      .then((res) => res.json())
-      .then((result) => setEpisode(result.results))
-      .catch((err) => alert(err));
-  }, []);
-
-  //* Pagination
-  const lastCharacterIndex = currentPage * charactersPerPage;
-  const firstCharacterIndex = lastCharacterIndex - charactersPerPage;
-  const currentCharacters = characterData.slice(firstCharacterIndex, lastCharacterIndex);
+  }, [currentPage]);
 
   return (
     <div className="App">
-      <h1>RICK AND MORTY <Link className="link" to="/character">CHARACTERS</Link></h1>
-
+      <h1>RICK AND MORTY{" "} <Link className="link" to="/character">CHARACTERS</Link></h1>
       <Routes>
-        <Route path='/character' element={<Characters 
-        characterData={currentCharacters}
-        location={location}
-        episode={episode}
-        />} />
+        <Route path="/character" element={<Characters apiData={apiData} />} />
       </Routes>
-
-      <Pagination
-        totalCharacters={characterData.length}
-        charactersPerPage={charactersPerPage}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      />
+      <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} apiData={apiData}/>
     </div>
   );
 }

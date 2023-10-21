@@ -1,33 +1,35 @@
-body{
-  background-image: url(https://user-images.githubusercontent.com/21046633/81761062-51203e80-949f-11ea-9d94-824e11530cf3.png);
-  color:darkturquoise;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+body {
+  background-color: rgb(8, 87, 28);
+  color:rgb(48, 208, 88);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: center;
 }
 
-.character-img{
+.character-img {
+  width: 170px;
   border-radius: 50%;
-  border: 3px solid yellow;;
-  box-shadow: 5px 5px 10px #ffe400;
+  border: 5px solid rgb(48, 208, 88);
 }
 
-.main-container{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.main-container {
+  font-size: 13px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  gap: 20px 120px;
+  align-items: center;
+  justify-content: center;
 }
 
-.link{
-  color: yellow;
-  text-shadow: 1px 1px 1px #ffe400;
+.link {
+  color: #ffe400;
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.episodes{
+.episodes {
   color: #ffe400;
 }
 
@@ -40,12 +42,11 @@ li{
 }
 
 .pagination button {
-  width: 40px;
-  height: 40px;
-  font-family: inherit;
+  width: 35px;
+  height: 35px;
   font-weight: 600;
-  font-size: 16px;
-  margin: 0 10px;
+  font-size: 10px;
+  margin: 5px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -56,7 +57,6 @@ li{
 
 .pagination button.active {
   font-weight: 900;
-  border-color: #101010;
   background: #ffe400;
   color: #101010;
 }
